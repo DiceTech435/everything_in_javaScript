@@ -1,0 +1,127 @@
+
+<style>
+
+    form{
+        margin: auto;
+        width: 400px;
+        border: 1px solid rgb(172, 156, 156);
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 90px;
+    }
+    
+    input{
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    
+    button{
+        width: 100%;
+        padding: 15px;
+        color: #fff;
+        background-color: blue;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    button:hover{
+        color: #fff;
+        background-color: rgb(13, 100, 150);
+    }
+    
+    #error{
+        color: red;
+    }
+
+    #success{
+        color:green;
+    }
+    
+    .hide{
+        display: none;
+    }
+
+</style>
+
+
+
+
+<body>
+    
+    <form>
+            <h3  id="error"></h3>
+            <h3  id="success"></h3>
+        
+            <input type="text" placeholder="Enter fullname" id="fullname"><p>
+    
+            <input type="text" placeholder="Enter username" id="username"><p>
+    
+            <input type="number" placeholder="Enter age" id="age"><p>
+    
+            <!-- <button type="submit" id="validate">Validate</button>  --OR -->
+             <input type="button" id="validate" value="Validate">
+        
+    </form>
+
+
+<script>
+    
+    let submit = document.getElementById("validate");
+    
+    submit.addEventListener("click", function(e){
+      
+        e.preventDefault();
+        let error = document.getElementById("error");
+        let success = document.getElementById("success");
+        let fullname = document.getElementById("fullname").value;
+        let username = document.getElementById("username").value;
+        let age = document.getElementById("age").value;
+        let regex = /^[A-Za-z]+$/;
+
+        if(fullname == ""){
+            error.innerHTML = "Enter a fullname";
+            success.innerHTML = "";
+        }
+        else if(!regex.test(fullname)){
+            error.innerHTML = "Invalid fullname";
+            success.innerHTML = "";
+        }
+        else if(username == ""){
+            error.innerHTML = "Enter a username";
+            success.innerHTML = "";
+        }
+        else if(!regex.test(username)){
+            error.innerHTML = "Invalid username";
+            success.innerHTML = "";
+        }
+        else if(age == ""){
+            error.innerHTML = "Enter age";
+            success.innerHTML = "";
+        }
+        else if(age < 18 || age >= 60){
+            error.innerHTML = "Invalid age";
+            success.innerHTML = "";
+        }
+        else{
+            success.innerHTML = "Welcome";
+            error.innerHTML = "";
+            submit.style.cursor = "progress";
+            submit.value = "procressing......";
+                setTimeout(() => {
+                    location.href="autoType/test.html";
+                }, 3000);
+        }
+    });
+    
+
+</script>
+
+
+</html>

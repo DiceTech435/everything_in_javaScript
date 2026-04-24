@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: red;
+            text-align: center;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    let color = "black";
+
+    switch(color){
+        case color = "red":
+            console.log("The color is red");
+            break;
+        case color = "blue":
+            console.log("The color is blue");
+            break;
+        case color = "pink": 
+            console.log("The color is pink");
+            break;
+        case color = "green": 
+            console.log("The color is green");
+            break;
+        default: 
+            console.log("No color is found");   
+    }
+
+    let age = -3;
+    switch(true){
+        case age <= 15:
+            if(age <= 0){
+                console.log("Age is invalid");
+            }else{
+                console.log("You are underage");
+            }
+        break;
+        case age <= 39: 
+        console.log("You are welcome");
+        break;
+        case age >= 40: 
+        console.log("You are over aged");
+        break;
+        default:
+            console.log("Age does not exist");  
+    }
+
+    if(age <= 15){
+        if(age <= 0){
+            console.log("Invalid age");
+        }
+        else{
+            console.log("You are underage");
+        }
+    }
+    else if(age <= 39){
+        console.log("You are welcome");
+    }
+    else if(age >= 40){
+        console.log("You are over aged");
+    }
+    else{
+        console.log("Age does not exist");
+    }
+
+
+    // OBJECTS
+    let profile = {
+        name: "Divine",
+        age: 40,
+        adress: "Behind Fed Inec Office, Lagos",
+        favFruits: ["Berries", "Banana", "Orange"],
+        student: true,
+        education: {
+            course: "MBBS",
+            yearOfGrad: 2024,
+            gp: 2.1,
+        },
+        
+         about: function(){
+            console.log(`My name is ${this.name}, i am ${this.age} years old. I live ${this.adress}.`);
+        },
+    }
+
+    // console.log(profile.name);
+    // console.log(profile.age);
+    // console.log(profile.adress);
+    // console.log(profile.favFruits);
+    // console.log(profile.student);
+    // console.log(profile.about);
+        profile.about();
+
+
+    // MATHS FUNCTIONS
+    // let show = Math.PI;
+    // let show = Math.E;
+    // let show = Math.round();
+    // let show = Math.random();
+    // let show = Math.floor(6.54);
+    // let show = Math.ceil(6.54);
+    // let show = Math.trunc(6.54);
+    // let show = Math.pow(4, 2);
+    // let show = Math.abs(-100);
+    // let show = Math.max(2, 3, 6, 20, 10, 11);
+    // let show = Math.min(2, 3, 6, 20, 10, 11, -1, 0);
+    // let show = Math.sqrt(2);
+    // let show = Math.log(100);
+
+    // console.log(show);
+
+
+    // FUNCTIONS
+    function sayHello(){
+        console.log("Hello");
+    }
+
+    function callGirl(){
+        alert("The girl is beautiful");
+    }
+
+    function add(num1, num2){
+        console.log(num1 + num2);
+    }
+
+    function callName(name, age, address){
+        // console.log("My name is " + name );
+        console.log(`My name is ${name}, i am ${age} years old. I live ${address}`);
+    }
+
+    sayHello();
+    // callGirl();
+    // add(200, 10);
+    callName("Matthew");
+    callName("Dice", 30, "Behind Fed Inec Office.");
+
+
+    function areaOfRectangle(length, breathe){
+        console.log(length * breathe);
+    }
+    areaOfRectangle(3, 4);
+    function areaOfCircle(radius){
+        // πr^2
+        console.log(Math.PI * radius ^ 2);
+    }
+    areaOfCircle(4);
+
+    function add(num1, num2, num3){
+        console.log(num1+num2+num3);
+    }
+
+    add(3, 4, 1);
+    add(0, 3, 10);
+
+    // Create a function to calculate the average of 5 numbers.
+    function averageOf5(num1, num2, num3, num4, num5){
+        console.log((num1 + num2 + num3 + num4 + num5 ) / 5);;
+    }
+    averageOf5(3, 5, 6, 7, 4);
+
+
+    let fruits = [8, 6, 7, "dice"];
+    console.log(fruits[3]);
+    console.log(fruits.length);
+
+    // Calculate average of numbers.
+    // function average(nums){
+    //     console.log((nums)/nums.length);
+    // }
+
+    // nums = [4, 5, 8, 10];
+    // average(nums);
+
+    // Function declaration
+    // function dance(callback){
+    //     console.log(`I am dancing`);
+    //     callback();
+    // }
+
+
+    // dance(eat);
+    // eat();
+
+    // function hello(callback){
+    //     console.log("Hello");
+    //     callback();
+    // }
+
+    // function hi(call){
+    //     console.log("Hi");
+    //     call();
+    // }
+
+    // function yop(){
+    //     console.log("yop");  
+    // }
+    // hello(hi(yop));
+
+
+    function showName(name){
+        return "My name is " + name ;
+    }
+
+    // alert(showName("Dice"));
+
+
+    // Arrow functions
+    function goodBoy(){
+
+    }
+    //  validateAge  = (age) => {
+    //     if(age <= 17){
+    //         if(age <= 0){
+    //             console.log("Age is invalid");
+    //         }else{
+    //             console.log("You are underage");
+    //         }
+    //     }else if(age >= 40){
+    //         console.log("Age is above limit");
+    //     }
+    // }
+
+    // ternary operator ?:
+    validateAge  = (age) => {
+         age <= 17 ? console.log("You are underage!") : console.log("You are welcome!!");   
+    }
+
+    validateAge(18);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //USING CALLBACKS 
+
+     function greet (name,callback){
+         console.log("Hello" + name);
+         callback()
+        
+     }
+     function goodBye () {
+         console.log("goodBye!");
+
+        
+     }
+     console.log(greet);
+
+     function doSomething (callback){
+           console.log("doing something.....");
+        //    callback()
+     }
+
+     function done(){
+        console.log("im done");
+        
+     }
+
+     doSomething(done);
+     
+//USING THE RETURN KEY WORD
+    // function add(x ,y){
+    //     return x + y
+    // } 
+    // let result = add(4,7);
+    // console.log(result);
+
+    //   function buyData(balance,price){
+    //        if(balance >= price){
+    //         return " purchase sucessful";
+    //        }  
+
+    //        else{
+    //         return "insufficient balance"
+    //        }
+    //   }
+
+    //   let result = buyData(500,300);
+    //   console.log(result);
+
+    
+
+    //   function withdraw(balance, amount){
+    //         if (amount > balance){
+    //             return "insufficient balance" ;
+    //         }
+
+    //       let newbalance = balance - amount ;
+    //       return newbalance;
+    //   }
+
+    //   let result1= withdraw(1000, 3000);
+    //   console.log(result1)
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

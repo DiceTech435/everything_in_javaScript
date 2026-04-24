@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function adds(callback){
+    //     console.log("200");
+    //     callback();
+    // };
+
+    // function eat(call){
+    //     console.log("I am eating");
+    //     call();
+    // }
+
+    // function subtract(){
+    //     console.log("300");
+    // }
+    // adds(() => eat(subtract));
+    // adds(() => eat(subtract));
+
+    let eat = (callback) =>{
+        console.log("Eat");
+        callback();
+    }
+    let drink = (callback) =>{
+        console.log("Drink");
+        callback();
+    }
+    let dance = () =>{
+        console.log("Dance");
+    }
+    // eat(() => drink(dance));
+
+
+// sum(displayPage, 1, 2);
+// function sum(callback, x, y){
+//     let result = x + y;
+//     callback(result);
+// };
+
+function sum(callback, num1, num2){
+    let total = num1 + num2;
+
+    callback(total)
+}
+
+// function display(args){
+//     console.log(args);
+// } 
+
+// display("Dice");
+// display(["Dice", true, 32]);
+
+// sum(display, 3, 4);
+
+let student = (callback, name, address, age) => {
+    let final = `My name is ${name}, i live ${address}. I am ${age} years old.`;
+    let final2 = `This is the final stage`;
+    callback(final, final2);
+}
+
+let continuee = (unknownProfile, unknownFinal) => {
+    console.log(`${unknownProfile}. How may i help you..? ${unknownFinal}`);
+}
+
+// student(continuee, "Matthew", "Behind Somewhere", 30);
+// student(continuee, "Divine", "at Babtech comp", 20);
+
+
+// High order array methods
+// .forEach()
+// .map()
+// .filter()
+// .sort()
+// .find()
+// .reduce()
+
+
+// FOREACH
+const fruits = ["Mango", "Banana", "Pawpaw", "Berry", "Apple"];
+//  console.log(fruits);
+//  console.log(fruits[0]);
+//  console.log(fruits[1]);
+//  console.log(fruits[2]);
+//  console.log(fruits[3]);
+//  console.log(fruits[4]);
+
+//  let name = "Dice";
+//  console.log(name);
+
+// fruits.forEach(function() {
+// fruits.forEach((fruit) => {
+//     console.log(fruit);
+// });
+
+
+// Assignment
+// -> create a function to display your passions and skills. Insside the function, accept a callback function to alert the result. 
+// -> Create an array of all the LGAs in Lagos and loop them one-by-one.
+
+
+
+function displayPassions(passions, passCallback){
+    passCallback(passions);
+}
+
+function alertMe(passions){
+    alert(passions);
+}
+
+// displayPassions(alertMe("Singing, dancing, reading, cooking, coding"));
+// alertMe("Singing, dancing, reading");
+
+
+let lgas = ["Ikeja", "Alimosho", "Ojo", "Agege", "Epe", "Surulere", "Eti-Osa1", "Apapa", "Eti-Osa2"];
+console.log(lgas[0] + ". I love this Lga");
+console.log(lgas[1] + ". I like this Lga");
+
+// lgas.forEach((lga, index) => {
+//     console.log(`${index}. ${lga}`);
+//     // console.log(`${lga}`);
+// })
+
+// lgas.forEach((lga, index, array) => {
+//     console.log(`${index}. ${lga}`);
+//     // console.log(`${lga}`);
+// })
+
+
+// function display(number){
+//     console.log(number);
+// }
+
+// numbers.forEach(display);
+
+// let display = (number) => {
+//     console.log(number);
+// }
+// numbers.forEach(display);
+
+function double(number, index, array){
+    return 
+}
+
+function tripple(num, index, array){
+    console.log(array[index] = num * 3);
+}
+
+function square(num, index, array){
+    console.log(Math.pow(num, 2));
+}
+
+function cube(num, index, array){
+    console.log(Math.pow(num, 3));
+}
+
+function transformUpper(name, index, array){
+    // console.log(`${array[index] = name.charAt(0).toUpperCase()}${name.slice(1).toLowerCase()}`);
+    console.log(array[index] = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase());
+}
+
+let numbers = [2, 4, 7, 10, 11];
+// let name = "james";
+let names = ["james", "samuel", "agatha", "cynthia"];
+// console.log(capitals[0]);
+// console.log(capitals[1]);
+// console.log(capitals[2]);
+// console.log(capitals[3]);
+// console.log(capitals[4]);
+
+// numbers.forEach(double);
+// numbers.forEach(tripple);
+// numbers.forEach(square);
+// numbers.forEach(cube);
+// names.forEach(transformUpper);
+
+
+
+// MAp
+let bigNames = ["Emma", "Cornel", "Samson", "Sarah", "Bimbo", "Lancelot", "Happiness"];
+
+// function upperCase(element){
+//     console.log(element.toUpperCase());
+// }
+
+
+// bigNames.map(upperCase);
+// bigNames.map(toLowerCase);
+
+// bigNames.map(function upperCase(element){
+//     console.log(element.toUpperCase());
+// })
+
+// bigNames.map(function (element){
+//     console.log(element.toLowerCase());
+// }
+// )
+
+
+// let bigNumbers = [2, 3, 4, 5, 6];
+
+
+// bigNumbers.map(function(bigNumber){
+//     console.log(Math.pow(bigNumber, 2)
+// );
+// });
+
+// FILTER
+myNums = [0, 1, 2 ,3, 4, 5, 6, 7, 8, 9, 10];
+
+function bigNums(num){
+    // if(num > 5){
+    //     console.log(num);
+    // }
+
+    // num > 5 ? console.log(num) : "";
+    num > 5 && console.log(num);
+}
+
+function smallNums(num){
+    num < 5 && console.log(num);
+}
+
+// myNums.filter(bigNums);
+myNums.filter(smallNums);
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- ARRAY LOOPIN ASSIGNMENT -->
+<table border cellpadding="20px" id="table"></table>
+
+<script>
+
+let table = document.getElementById("table");
+let tableDisplay = "" ;
+
+let names = ["Abraham", "Tim", "Isaac", "Viv", "Gab", "Mat", "Reng", "Peter"];
+let ages = [25, 30, 22, 28, 24, 32, 27, 13];
+let heights = [55, 39, 42, 58, 54, 62, 57, 53];
+let count = 1;
+
+names.forEach((name, index) => {
+    tableDisplay = tableDisplay + `          
+                                    <tr>
+                                        <td>${count++}</td>
+                                        <td>${name}</td>
+                                        <td>${ages[index]}</td>
+                                        <td>${heights[index]}</td>
+                                    </tr>`
+});
+
+
+table.innerHTML = `
+                    <tr>
+                        <th>S/N.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                    </tr>
+
+                    ${tableDisplay}` ;
+
+// console.log(`<h1>Hello</h1>`);
+// console.log(table)
+
+
+
+</script>

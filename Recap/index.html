@@ -1,0 +1,101 @@
+<meta charset="utf-8">
+<style>
+h3{
+    font-size: 25px;
+}
+.data{
+    font-size: 27px;
+}
+</style>
+
+<h3>Hello, here are the elements</h3>
+<div class="data" name="Hello">Element 1</div>
+<div class="data">Element 2</div>
+<div class="data">Element 3</div>
+<div class="data">Element 4</div>
+<div class="data">Element 5</div>
+
+
+<script src="script.js"></script>
+
+<script>
+
+    //Example 1
+let text = document.getElementById("data");
+console.log(text);
+
+
+//Example 2
+let datas = document.getElementsByClassName("data");
+for(let data of datas){
+    console.log(data.innerHTML);
+}
+
+i = 0; 
+while(i < datas.length){
+    console.log(datas[i].innerHTML);
+    i++;
+}
+
+    
+let name = "Emmanuel";
+let age = 25;
+let address = "Behind old market";
+
+
+let x;
+x = 3;
+x -= 5;
+console.log(x);
+
+let fruit = "grrepple";
+
+switch(fruit){
+    case fruit = "Mango":
+        console.log('i dont like Mango');
+        break;
+    case fruit = "Apple":
+        console.log('i dont like Apple');
+        break;
+    case fruit = "orange":
+        console.log('i love Orange');
+        break;
+        default:
+            console.log("i dont like any of the fruits");;
+}
+
+function details(name, age, height){
+    console.log("My name is " + name + ", and i am " + age + "years old and " + height + "meters tall");;
+}
+
+details("Emma", 54, 63)
+
+
+let country = "Nigeria";
+let continent = "Africa";
+
+let result1 = "Nigeria".charAt(2);
+let result2 = continent.charAt(2);
+
+console.log(result1);
+console.log(result2);
+
+
+
+let num1 = 20.3;
+let num2 = 31.1;
+let num3 = 40.9;
+
+let finalNum =  41 * Math.E;
+console.log(finalNum);
+
+
+
+let price = 120;
+
+let discount = price >= 100 ? 10 : 0;
+
+let total = price - price * (discount/100);
+console.log("Your total is " + "$" + total);
+
+</script> 
