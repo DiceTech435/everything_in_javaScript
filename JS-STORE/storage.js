@@ -85,8 +85,9 @@
 
 // DISPLAY POSSIBILITIES(Functions)
 console.dir(document); //used for debugging purposes only
-console.log(document); //used for debugging purposes only
-console.error(); //used for catching errors(caught, type or syntax error)
+console.log(document); //used for debugging purposes only -- clg
+console.error(); //used for catching errors(caught, type or syntax error) -- cer
+// console.warn(); cwr
 console.assert();
 document.write();//this will delete all existing HTML, used only for testing purposes
 window.alert(); alert() //used for 
